@@ -1,0 +1,34 @@
+/* style.css */
+
+/* a. Background color and image with gradient overlay */
+body {
+    background-color: #f4f4f4; /* Fallback color */
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* b. Styling for h1 heading */
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff; /* Adjust color according to your background */
+}
+
+/* c. Styling for paragraphs */
+p {
+    font-size: 15px;
+    color: #ffffff; /* Adjust color according to your background */
+    line-height: 1.5; /* Increase line spacing */
+}
+
+/* d. Styling for important words */
+em {
+    background-color: yellow; /* Highlight important words */
+}
+
+/* e. Styling for h2 heading */
+h2 {
+    font-size: 20px;
+    color: #ffffff; /* Adjust color according to your background */
+}
