@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+   
+    <div id="display"></div>
+   <!-- <script>
+        display = document.getElementById("display");
+        var username = prompt("enter your name:");
+        function message()
+        {
+            dt = new Date();
+            if(dt.getHours()>=4 && dt.getHours()<12)
+            {
+                greet = "good morning" + username + "!";
+            }
+            else if(dt.getHours()>=12 && dt.gethours()<=16)
+            {
+                greet = "good afternoon" + username  + "!";
+            }
+            else if(dt.getHours()>16 && dt.getHours()<=20)
+            {
+                greet = "good evening" + username  + "!";
+            }
+            else
+            {
+                greet = "good night" + username  + "!";
+            }
+             display.innerHTML = greet;
+        }
+        message();
+    </script>
+   --> 
+   <script>
+   function getGreetingMessage() {
+    var date = new Date();
+    var hour = date.getHours();
+    var greeting;
+    if (hour < 12) {
+        greeting = "Good morning";
+    } else if (hour < 18) {
+        greeting = "Good afternoon";
+    } else {
+        greeting = "Good evening";
+    }
+
+    return greeting;
+}
+
+// Function to display the greeting message with the user's name
+function displayGreeting() {
+    var userName = prompt("Please enter your name:");
+    var greetingMessage = getGreetingMessage();
+    var greetingElement =   greetingMessage  + ", " + userName + "!";
+    display.innerHTML = greetingElement;
+}
+
+// Function to hide the greeting message when clicked
+function hideGreeting() {
+    var greetingElement = document.getElementById("greeting");
+    greetingElement.style.display = "none";
+    display.innerHTML = "none";
+}
+displayGreeting();
+ onclick="hideGreeting()";
+</script>
+</body>
+</html>

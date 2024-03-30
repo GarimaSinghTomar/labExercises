@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>que21</title>
+</head>
+<body>
+   <!-- <button onclick="setInterval(clock,100)"> start </button> --> 
+    <div id="display"></div>
+    <script>
+        function clock()
+        {
+         display = document.getElementById("display");
+         dt = new Date();
+         hh = dt.getHours();
+         mm = dt.getMinutes();
+         ss = dt.getSeconds();
+         time = hh + ":" + mm + ":" + ss;
+         display.innerHTML = time;
+        }
+        setInterval(clock,100);
+    </script>
+</body>
+</html>
