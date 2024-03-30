@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number" name="inputV" onchange="tempconv()" />
+        <select name="inputOp" onchange="tempconv()">
+        <option value="C">celsius</option>
+        <option value="K">kelvin</option>
+        </select>
+        <input type="number" name="outputV" />
+        <select name="outputOp" onchange="tempconv()">
+            <option value="C">celsius</option>
+            <option value="K">kelvin</option>
+         </select>
+    </form>
+   <script>
+      function tempconv()
+      {
+        inputV = parseFloat(document.forms[0].elements['inputV'].value);
+        inputOp = document.forms[0].elements['inputOp'].value;
+        outputOp = document.forms[0].elements['outputOp'].value;
+        if(inputOp=='C' && outputOp=='K')
+        {
+           result = inputV + 273.15;
+        }
+        else if(inputOp=='K' && outputOp=='C')
+        {
+            result = inputV - 273.15;   
+        }
+        else{
+            result = inputV;
+        }
+        document.forms[0].elements['outputV'].value=result;
+      }
+   </script>
+</body>
+</html>
